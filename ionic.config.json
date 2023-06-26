@@ -1,0 +1,7 @@
+{
+  "name": "MyBankPosteFront",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

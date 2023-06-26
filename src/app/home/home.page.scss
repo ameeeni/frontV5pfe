@@ -1,0 +1,60 @@
+#container {
+  text-align: center;
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.logo-laposte{
+  margin-top: 0;
+  height:70px;
+  width: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 140px;
+}
+
+#container strong {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+#container p {
+  font-size: 16px;
+  line-height: 22px;
+
+  color: #8c8c8c;
+
+  margin: 0;
+}
+
+#container a {
+  text-decoration: none;
+}
+.welc-title{
+  text-align: center;
+  font-weight: normal;
+}
+.starting-image{
+  margin-top: 50px;
+  margin-left:10px;
+  margin-right: 10px;
+}
+.starting-title h4{
+  text-align: center;
+  font-weight: bold;
+}
+.button-content {
+display: flex;
+  justify-content: center;
+  align-content: center;
+  margin-top:50px ;
+  flex-direction: column;
+  padding-left: 20px;
+  padding-right: 20px;
+
+}
+

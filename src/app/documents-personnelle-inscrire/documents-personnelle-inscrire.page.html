@@ -1,0 +1,63 @@
+<ion-content class="cp-content">
+  <div class="starting-image">
+    <img class="logo-laposte" src="assets/images/logo-laposte.png">
+  </div>
+  <ion-card>
+    <ion-card-content class="card-content">
+      <div class="register-title">
+        <h1>Ajouter vos Documents Personnels</h1>
+      </div>
+      <form style="margin-top: 15px;" [formGroup]="documentsForm">
+        <ion-label style="margin-top: 20px; margin-left: 20px"> Entrer Votre Image de Carte Recto</ion-label>
+        <ion-item>
+          <ion-icon lazy="true" slot="start" name="carteRecto"></ion-icon>
+          <ion-input type="file"  id="file-input1" accept="image/png, image/jpeg" [(ngModel)]="doc.carteRecto" formControlName="carteRecto"></ion-input>
+        </ion-item>
+        <ion-label style="margin-top: 20px; margin-left: 20px"> Entrer Votre Image de Carte Verso</ion-label>
+        <ion-item>
+          <ion-icon lazy="true" slot="start" name="carteVerso"></ion-icon>
+          <ion-input type="file"  id="file-input2" accept="image/png, image/jpeg"  [(ngModel)]="doc.carteVerso" formControlName="carteVerso"></ion-input>
+        </ion-item>
+        <ion-label style="margin-top: 20px; margin-left: 20px"> Entrer Votre Justification de revenu</ion-label>
+        <ion-item>
+          <ion-icon lazy="true" slot="start" name="justRev"></ion-icon>
+          <ion-input type="file"  id="file-input3" accept="image/png, image/jpeg" [(ngModel)]="doc.justRev" formControlName="justRev"></ion-input>
+        </ion-item>
+        <ion-label style="margin-top: 20px; margin-left: 20px"> Entrer Votre Justificatif Compte Postal</ion-label>
+        <ion-item>
+          <ion-icon lazy="true" slot="start" name="justCp"></ion-icon>
+          <ion-input type="file"  id="file-input4" accept="image/png, image/jpeg" [(ngModel)]="doc.justCp" formControlName="justCp"></ion-input>
+        </ion-item>
+        <ion-label style="margin-top: 20px; margin-left: 20px"> Entrer Votre Justification d'adresse</ion-label>
+        <ion-item>
+          <ion-icon lazy="true" slot="start" name="justAdresse"></ion-icon>
+          <ion-input type="file"  id="file-input5" accept="image/png, image/jpeg" [(ngModel)]="doc.justAdresse" formControlName="justAdresse"></ion-input>
+        </ion-item>
+      </form>
+      <ion-item style="margin-top: 10px;">Pour que nous puissions vérifier votre identité, veuillez prendre un selfie en tenant dans votre main votre carte d'identité comme indiqué dans la photo. Votre image sera utilisée exlusivement par la Poste Tunisienne pour la sécurisation de l'opération d'inscription aux services de MyPosteBank.</ion-item>
+      <ion-item style="--background: var(--ion-color-primary); color: white;
+   margin-top: 10px; border-radius: 8px;">Cliquez ici pour prendre  un selfie  avec la carte d'identité</ion-item>
+      <ion-button type="submit" class="cp-btn" id="open-modal" >
+        Terminer
+      </ion-button>
+      <ion-modal trigger="open-modal">
+        <ng-template>
+          <ion-content>
+            <ion-card>
+              <ion-card-content>
+                <svg viewBox="0 0 26 26" xmlns="http://www.w3.org/2000/svg">
+                  <g stroke="currentColor" stroke-width="2" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+                    <path class="circle" d="M13 1C6.372583 1 1 6.372583 1 13s5.372583 12 12 12 12-5.372583 12-12S19.627417 1 13 1z"/>
+                    <path class="tick" d="M6.5 13.5L10 17 l8.808621-8.308621"/>
+                  </g>
+                </svg>
+                Votre demande a bien été envoyée en succées vous vous recevez un message contenant votre identifiant et votre mot de passe
+              </ion-card-content>
+              <ion-button href="home" style="align-items: center;">Acceuil</ion-button>
+            </ion-card>
+          </ion-content>
+        </ng-template>
+      </ion-modal>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
