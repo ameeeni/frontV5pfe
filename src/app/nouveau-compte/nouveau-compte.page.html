@@ -9,26 +9,26 @@
       </div>
       <ion-list>
        <div class="items-list">
-         <input type="radio" name="Compte" />
+         <input type="radio"  value="CompteEpar"  [(ngModel)]="cptDemande.type_de_compte" />
          <p class="content-list">
            <ion-title>Compte Epargne</ion-title>
            Epargnez chez la Poste et bénéficiez d’un taux attractive avec la garantie de l’état.
          </p>
        </div>
         <div class="items-list">
-          <input type="radio" name="Compte" />
+          <input type="radio"  value="CompteCour" [(ngModel)]="cptDemande.type_de_compte" />
           <p class="content-list">
             <ion-title>Compte Courant</ion-title>
             Bénéficiez des avantages du compte courant postal pour réaliser vos transactions          </p>
         </div>
         <div class="items-list">
-          <input type="radio" name="Compte" />
+          <input type="radio"   value="ComptePro" [(ngModel)]="cptDemande.type_de_compte" />
           <p class="content-list">
             <ion-title>Compte Professtionnel</ion-title>
             Choisissez le placement de la Poste offrant l’un des meilleurs rendements du marché.          </p>
         </div>
-
-        <ion-button type="submit" class="cp-btn" href="/identite-client">
+<!--        href="/type-du-client-nouveau-compte"-->
+        <ion-button type="submit" class="cp-btn" (click)="getTypedeCompte()" >
           Suivant
         </ion-button>
       </ion-list>

@@ -9,9 +9,9 @@ import {Observable} from "rxjs";
 export class ConsulterMesComptesService {
 
   constructor(private _http : HttpClient) { }
-  getAccountById():Observable<any>{
-    let params1 = new HttpParams().set("id" , "51")
-    return this._http.get("http://localhost:8081/CompteEpargne/1");
-
-  }
+  // getAccountByIBAN():Observable<any>{
+  //
+  //   return this._http.get("http://vps95761.serveur-vps.net:8080/Compte/iban/" ,{iban} );
+  //
+  // }
 }

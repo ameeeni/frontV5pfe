@@ -1,0 +1,76 @@
+<ion-content class="cpro-content">
+  <div class="starting-image">
+    <img class="logo-laposte" src="assets/images/logo-laposte.png">
+  </div>
+  <ion-card>
+    <ion-card-content class="card-content">
+      <div class="register-title">
+        <h1>Continuer par remplir ces champs</h1>
+      </div>
+      <form [formGroup]="ouvCptclientProForm" (ngSubmit)="RegisterClientPro()"  >
+        <ion-item>
+          <ion-label position="floating">Nom :</ion-label>
+          <ion-input placeholder="Ecrire votre nom" formControlName="firstname" [(ngModel)]="clientPro.nom"></ion-input>
+          <small *ngIf="ouvCptclientProForm.controls['firstname'].errors && ouvCptclientProForm.controls['firstname'].touched" class="ion-color-danger">
+            le nom est obligatoire
+          </small>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Prénom :</ion-label>
+          <ion-input placeholder="Ecrire votre prénom" formControlName="lastname" [(ngModel)]="clientPro.prenom"></ion-input>
+          <small *ngIf="ouvCptclientProForm.controls['lastname'].errors && ouvCptclientProForm.controls['lastname'].touched" class="ion-color-danger">
+            le prénom est obligatoire
+          </small>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Email :</ion-label>
+          <ion-input placeholder="Ecrire votre e-mail" formControlName="email" [(ngModel)]="clientPro.email"></ion-input>
+          <small *ngIf="ouvCptclientProForm.controls['email'].errors && ouvCptclientProForm.controls['email'].touched" class="ion-color-danger">
+            l'email est obligatoire
+          </small>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Numéro de téléphone :</ion-label>
+          <ion-input type="number" placeholder="Ecrire votre numéro" formControlName="phone" [(ngModel)]="clientPro.phone" ></ion-input>
+          <small *ngIf="ouvCptclientProForm.controls['phone'].errors && ouvCptclientProForm.controls['phone'].touched" class="ion-color-danger">
+            le numéro est obligatoire
+          </small>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Mot de passe :</ion-label>
+          <ion-input type="password" placeholder="Ecrire votre mot de passe" formControlName="mot_de_passe" [(ngModel)]="clientPro.mot_de_passe"></ion-input>
+
+          <small *ngIf="ouvCptclientProForm.controls['mot_de_passe'].errors && ouvCptclientProForm.controls['mot_de_passe'].touched" class="ion-color-danger">
+            le mot de passe est obligatoire
+          </small>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating"> Matricule Fiscale:</ion-label>
+          <ion-input placeholder="Ecrire votre matricule" formControlName="matricule_fiscale" [(ngModel)]="clientPro.matricule_fiscale"></ion-input>
+          <small *ngIf="ouvCptclientProForm.controls['matricule_fiscale'].errors && ouvCptclientProForm.controls['matricule_fiscale'].touched" class="ion-color-danger">
+            Veuillez entrez votre matricule fiscale
+          </small>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Raison Social :</ion-label>
+          <ion-input placeholder="Ecrire votre raison social" formControlName="raison_social" [(ngModel)]="clientPro.raison_social"></ion-input>
+          <small *ngIf="ouvCptclientProForm.controls['raison_social'].errors && ouvCptclientProForm.controls['raison_social'].touched" class="ion-color-danger">
+            Veuillez entrez votre raison social
+          </small>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Numéro Registre Commerce :</ion-label>
+          <ion-input placeholder="Ecrire votre Numéro registre de commerce" formControlName="numero_registre_commerce" [(ngModel)]="clientPro.num_reg_comm"></ion-input>
+          <small *ngIf="ouvCptclientProForm.controls['raison_social'].errors && ouvCptclientProForm.controls['raison_social'].touched" class="ion-color-danger">
+            Veuillez entrez votre numéro de registre commercial
+          </small>
+        </ion-item>
+<!--        [disabled]="!this.ouvCptclientProForm.valid"-->
+<!--        href ='/documents-perso'-->
+        <ion-button type="submit" class="cpr-btn"  >Continuer</ion-button>
+      </form>
+
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+

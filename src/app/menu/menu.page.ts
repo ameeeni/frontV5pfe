@@ -22,7 +22,7 @@ export class MenuPage implements OnInit {
           url :'menu/dashbordAchat',
           icon:'briefcase-outline'
         } ,{
-          title:'Ouvrir un compte ',
+          title:'Ouvrir un autre compte ',
           url :'nouveauCompte',
           icon:'briefcase-outline'
         }

@@ -7,8 +7,9 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
-import {HttpClientModule} from "@angular/common/http";
+import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import { Camera } from '@ionic-native/camera/ngx';
+import {AuthInterceptorInterceptor} from "./authenticate/auth-interceptor.interceptor";
 
 @NgModule({
   declarations: [AppComponent],
@@ -23,7 +24,9 @@ import { Camera } from '@ionic-native/camera/ngx';
     CUSTOM_ELEMENTS_SCHEMA,
     NO_ERRORS_SCHEMA
   ],
-  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }, Camera],
+  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }, Camera ,
+    {provide:HTTP_INTERCEPTORS, useClass:AuthInterceptorInterceptor, multi:true}
+],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

@@ -122,6 +122,18 @@ const routes: Routes = [
     path: 'type-de-compte',
     loadChildren: () => import('./type-de-compte/type-de-compte.module').then( m => m.TypeDeComptePageModule)
   },
+  {
+    path: 'type-du-client-nouveau-compte',
+    loadChildren: () => import('./type-du-client-nouveau-compte/type-du-client-nouveau-compte.module').then( m => m.TypeDuClientNouveauComptePageModule)
+  },
+  {
+    path: 'ouvrir-cpt-client-pro',
+    loadChildren: () => import('./ouvrir-cpt-client-pro/ouvrir-cpt-client-pro.module').then( m => m.OuvrirCptClientProPageModule)
+  },
+  {
+    path: 'ouvrir-cpt-client-par',
+    loadChildren: () => import('./ouvrir-cpt-client-par/ouvrir-cpt-client-par.module').then( m => m.OuvrirCptClientParPageModule)
+  },
 
 ];
 

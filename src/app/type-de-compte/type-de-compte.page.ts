@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Compte} from "./Compte";
 
 @Component({
   selector: 'app-type-de-compte',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./type-de-compte.page.scss'],
 })
 export class TypeDeComptePage implements OnInit {
+ cpt = new Compte();
 
   constructor() { }
 
