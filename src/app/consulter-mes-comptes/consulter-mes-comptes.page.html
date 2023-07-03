@@ -1,4 +1,4 @@
-<div class="container">
+<div *ngIf="listeDesComptes?.active === true" class="container">
 <div class="consult-profil-content">
 <div class="profil-part">
   <img src="assets/images/1077114.png"  class="profil-image">
@@ -6,6 +6,7 @@
     <div class="user-cheers">Bonjour,{{client.nom}}</div>
   </div>
 </div>
+  <div *ngIf="listeDesComptes?.active === true">
 <div class="consult-content">
   <ion-card class="card-container">
     <ion-card-title class="card-title">Votre Solde Totale</ion-card-title>
@@ -16,6 +17,11 @@
 </div>
 </div>
   <div class="transaction-content">
+
+
+
+
+
     <ion-title class="transation-title">Vos derniers transactions</ion-title>
     <ion-list lines="none">
       <ion-item>
@@ -29,4 +35,16 @@
 <!--      </ion-item>-->
     </ion-list>
   </div>
+</div>
+</div>
+
+
+<div *ngIf="hasAccount===false;" class="container">
+
+       Vous n'avez pas creer un compte bancaire ,Vous pouvez créer un compte bancaire en cliquant ci-dessous
+  <ion-button style="float: right; float: bottom;margin-top: 430px; margin-right: 15px;" href="/type-du-client-nouveau-compte">
+    <ion-icon name="arrow-back-outline"></ion-icon>
+  </ion-button>
+
+
 </div>

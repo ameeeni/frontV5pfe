@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
-import {Doc} from "../client-particulier/doc";
+import {Doc} from "../documents-perso/doc";
 
 @Component({
   selector: 'app-documents-personnelle-inscrire',

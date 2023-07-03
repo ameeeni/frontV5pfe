@@ -4,8 +4,9 @@ import {CompteProfessionnel} from "./CompteProfessionnel";
 import {Observable} from "rxjs";
 import {CompteCourrant} from "./CompteCourrant";
 import {CompteEpargne} from "./CompteEpargne";
-import {Compte} from "../type-de-compte/Compte";
+
 import {data, error} from "jquery";
+import {Compte} from "../choisir-votre-compte/Compte";
 
 @Injectable({
   providedIn: 'root'
@@ -18,10 +19,10 @@ export class TypeCompteService {
     return this.http.post("http://vps95761.serveur-vps.net:8080/CompteProfessionnel" ,comptePro)
   }
 
-  SaveCompteEpagrne(compteCour: CompteCourrant){
+  SaveCompteEpagrne(compteCour: CompteCourrant):Observable<any>{
   return this.http.post("http://vps95761.serveur-vps.net:8080/CompteCourrant" , compteCour);
   }
-  SaveCompteCourant(compteEpar: CompteEpargne){
+  SaveCompteCourant(compteEpar: CompteEpargne):Observable<any>{
     return this.http.post ("http://vps95761.serveur-vps.net:8080/CompteEpargne" , compteEpar);
   }
 

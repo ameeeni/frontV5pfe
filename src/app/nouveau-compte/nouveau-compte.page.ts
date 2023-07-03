@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Compte} from "../type-de-compte/Compte";
+import {Compte} from "../choisir-votre-compte/Compte";
 import {TypeCompteService} from "./type-compte.service";
 import {CompteProfessionnel} from "./CompteProfessionnel";
 import {CompteEpargne} from "./CompteEpargne";

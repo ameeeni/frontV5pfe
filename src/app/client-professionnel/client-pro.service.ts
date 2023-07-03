@@ -16,10 +16,11 @@ export class ClientProService {
    client !:ClientPro;
   data: any[] = [];
 
-  private readonly apiUrl = 'http://vps95761.serveur-vps.net:8080/Clients/email/hamza_bramli123@outlook.fr';
-  getClientByEmail(){
-    // const url = `${this.apiUrl}?email=${email}`
-    return this._http.get<any>(this.apiUrl);
+  private readonly apiUrl = 'http://vps95761.serveur-vps.net:8080/Clients/email';
+  getClientByEmail(email : string ){
+     const url = `${this.apiUrl}/${email}` ;
+    console.log(email) ;
+    return this._http.get<any>(url);
 
   }
 

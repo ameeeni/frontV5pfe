@@ -7,7 +7,9 @@ export class ClientPro {
   matricule_fiscale !:string;
   raison_social!: string;
   num_reg_comm !: string;
-
+  listeDesComptes !: any[];
+  id_account!: number;
+  id_client !:number;
   constructor() {
 
   }

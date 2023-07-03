@@ -118,10 +118,8 @@ const routes: Routes = [
   {
     path: 'faq',
     loadChildren: () => import('./faq/faq.module').then( m => m.FaqPageModule)
-  },  {
-    path: 'type-de-compte',
-    loadChildren: () => import('./type-de-compte/type-de-compte.module').then( m => m.TypeDeComptePageModule)
   },
+
   {
     path: 'type-du-client-nouveau-compte',
     loadChildren: () => import('./type-du-client-nouveau-compte/type-du-client-nouveau-compte.module').then( m => m.TypeDuClientNouveauComptePageModule)
@@ -133,6 +131,10 @@ const routes: Routes = [
   {
     path: 'ouvrir-cpt-client-par',
     loadChildren: () => import('./ouvrir-cpt-client-par/ouvrir-cpt-client-par.module').then( m => m.OuvrirCptClientParPageModule)
+  },
+  {
+    path: 'choisir-votre-compte',
+    loadChildren: () => import('./choisir-votre-compte/choisir-votre-compte.module').then( m => m.ChoisirVotreComptePageModule)
   },
 
 ];

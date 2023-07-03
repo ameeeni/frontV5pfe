@@ -1,0 +1,31 @@
+
+<ion-content class="register-content">
+  <div class="starting-image">
+    <img class="logo-laposte" src="assets/images/logo-laposte.png">
+  </div>
+  <ion-card>
+    <ion-card-content class="card-content">
+      <div class="register-title">
+        <h1>Vous préférez: </h1>
+      </div>
+<!--      href="/documents-perso"-->
+<!--      <form [formGroup]="typeForm">-->
+        <ion-button  class="register-btn"  (click)="handleButtonClick( 'PRO')"
+        >
+          Compte_Professtionnel
+        </ion-button>
+        <p class="choose"> Ou </p>
+        <ion-button class="register-btn"  id="client-particulier" (click)="handleButtonClick('COURANT')">
+          Compte_Courrant
+        </ion-button>
+        <p class="choose"> Ou </p>
+        <ion-button class="register-btn" id="client-courrant" (click)="handleButtonClick('EPARGNE')"  >
+          Compte_Epargne
+        </ion-button>
+<!--      </form>-->
+      <ion-button class="register-btn" (click)="saveCompte()"  >
+        submit
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

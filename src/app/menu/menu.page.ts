@@ -23,7 +23,7 @@ export class MenuPage implements OnInit {
           icon:'briefcase-outline'
         } ,{
           title:'Ouvrir un autre compte ',
-          url :'nouveauCompte',
+          url :'type-du-client-nouveau-compte',
           icon:'briefcase-outline'
         }
       ],

@@ -23,7 +23,7 @@ export class AuthenticatePage implements OnInit {
   ngOnInit() {
     this.loggedEmail = window.localStorage.getItem("email") ;
 
-    this.loggedClient =  this.clientService.getClientByEmail();
+    this.loggedClient =  this.clientService.getClientByEmail(this.loggedEmail);
 
 
 

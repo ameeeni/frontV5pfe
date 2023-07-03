@@ -25,7 +25,8 @@ import {AuthInterceptorInterceptor} from "./authenticate/auth-interceptor.interc
     NO_ERRORS_SCHEMA
   ],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }, Camera ,
-    {provide:HTTP_INTERCEPTORS, useClass:AuthInterceptorInterceptor, multi:true}
+    {provide:HTTP_INTERCEPTORS, useClass:AuthInterceptorInterceptor, multi:true} ,
+
 ],
   bootstrap: [AppComponent],
 })
