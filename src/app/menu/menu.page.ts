@@ -16,8 +16,8 @@ export class MenuPage implements OnInit {
         {
           title:'Consulter mes comptes ',
           url :'menu/consulterComptes',
-          icon:'briefcase-outline'
-        }, {
+          icon:'briefcase-outline'},
+        {
           title:'Dashbord de mes achats ',
           url :'menu/dashbordAchat',
           icon:'briefcase-outline'

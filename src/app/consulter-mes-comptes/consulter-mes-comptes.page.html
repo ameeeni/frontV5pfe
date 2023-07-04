@@ -1,4 +1,29 @@
-<div *ngIf="listeDesComptes?.active === true" class="container">
+
+<div  style ="margin-bottom: 1000px;" *ngIf="attente===true; ">
+<!--     *ngIf="((hasAccount===true) &&( listeDesComptes?.active === false) );  ">-->
+  <div class="container" class="ifnotactivated">
+
+    <ion-item class="ifnotactivated">
+      Votre demande de creation de compte bancaire est encours de validation par un administrateur .
+      un email sera vous communiqué trés bientot ;
+    </ion-item>
+
+  </div>
+</div>
+<!--*ngIf="eechec===true;"-->
+<div *ngIf="eechec===true;">
+  <div class="container" class="ifnotactivated">
+
+    <ion-item class="ifnotactivated">
+      Vous n'avez pas creer un compte bancaire ,Vous pouvez créer un compte bancaire en cliquant ci-dessous
+    </ion-item>
+    <ion-item (click)="NavigateToAccount()" style="float: right; float: bottom;margin-top: 300px; margin-right: 10px; margin-bottom: 50px; z-index: 100000000000000000;">
+      <ion-icon name="arrow-back-outline"></ion-icon>
+    </ion-item>
+  </div>
+</div>
+<div  *ngIf="listeDesComptes?.active === true;">
+<div  class="container">
 <div class="consult-profil-content">
 <div class="profil-part">
   <img src="assets/images/1077114.png"  class="profil-image">
@@ -6,26 +31,25 @@
     <div class="user-cheers">Bonjour,{{client.nom}}</div>
   </div>
 </div>
-  <div *ngIf="listeDesComptes?.active === true">
+  <div>
 <div class="consult-content">
   <ion-card class="card-container">
     <ion-card-title class="card-title">Votre Solde Totale</ion-card-title>
-    <ion-card-content class="card-content"   >
-      0.0 DT
+    <ion-card-content class="card-content" *ngIf="listeDesComptes?.solde!== null"  >
+     {{ listeDesComptes.solde}}
     </ion-card-content>
   </ion-card>
 </div>
 </div>
   <div class="transaction-content">
 
-
-
-
-
     <ion-title class="transation-title">Vos derniers transactions</ion-title>
-    <ion-list lines="none">
+    <ion-list *ngFor="let t of this.alltrans ;"class="list-trans" lines="none">
+      <div >
+
+      </div>
       <ion-item>
-        <ion-label>Aucune Transaction existante pour le moment</ion-label>
+        <ion-label>  *********** {{t.montant}}Aucune Transaction existante pour le moment</ion-label>
       </ion-item>
 <!--      <ion-item>-->
 <!--        <ion-label>No Lines</ion-label>-->
@@ -38,13 +62,6 @@
 </div>
 </div>
 
-
-<div *ngIf="hasAccount===false;" class="container">
-
-       Vous n'avez pas creer un compte bancaire ,Vous pouvez créer un compte bancaire en cliquant ci-dessous
-  <ion-button style="float: right; float: bottom;margin-top: 430px; margin-right: 15px;" href="/type-du-client-nouveau-compte">
-    <ion-icon name="arrow-back-outline"></ion-icon>
-  </ion-button>
-
-
 </div>
+
+

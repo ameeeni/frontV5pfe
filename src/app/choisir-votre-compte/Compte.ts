@@ -3,4 +3,6 @@ export class Compte{
   id_compte!:number;
   type_de_compte!:string;
   active!:boolean ;
+  iban!:string ;
+  solde !:number ;
 }

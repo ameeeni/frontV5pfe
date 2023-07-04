@@ -44,27 +44,14 @@
             le mot de passe est obligatoire
           </small>
         </ion-item>
-        <ion-item>
-          <ion-label position="floating"> Matricule Fiscale:</ion-label>
-          <ion-input placeholder="Ecrire votre matricule" formControlName="matricule_fiscale" [(ngModel)]="clientPro.matricule_fiscale"></ion-input>
-          <small *ngIf="ouvCptclientProForm.controls['matricule_fiscale'].errors && ouvCptclientProForm.controls['matricule_fiscale'].touched" class="ion-color-danger">
-            Veuillez entrez votre matricule fiscale
-          </small>
-        </ion-item>
-        <ion-item>
-          <ion-label position="floating">Raison Social :</ion-label>
-          <ion-input placeholder="Ecrire votre raison social" formControlName="raison_social" [(ngModel)]="clientPro.raison_social"></ion-input>
-          <small *ngIf="ouvCptclientProForm.controls['raison_social'].errors && ouvCptclientProForm.controls['raison_social'].touched" class="ion-color-danger">
-            Veuillez entrez votre raison social
-          </small>
-        </ion-item>
-        <ion-item>
-          <ion-label position="floating">Numéro Registre Commerce :</ion-label>
-          <ion-input placeholder="Ecrire votre Numéro registre de commerce" formControlName="numero_registre_commerce" [(ngModel)]="clientPro.num_reg_comm"></ion-input>
-          <small *ngIf="ouvCptclientProForm.controls['raison_social'].errors && ouvCptclientProForm.controls['raison_social'].touched" class="ion-color-danger">
-            Veuillez entrez votre numéro de registre commercial
-          </small>
-        </ion-item>
+          <ion-item>
+            <ion-label position="floating">Adresse</ion-label>
+            <ion-input type="text" placeholder="Ecrire votre adresse" formControlName="adresse" [(ngModel)]="clientPro.adresse" ></ion-input>
+            <small *ngIf="ouvCptclientProForm.controls['adresse'].errors && ouvCptclientProForm.controls['adresse'].touched" class="ion-color-danger">
+              le numéro est obligatoire
+            </small>
+          </ion-item>
+
 <!--        [disabled]="!this.ouvCptclientProForm.valid"-->
 <!--        href ='/documents-perso'-->
         <ion-button type="submit" class="cpr-btn" href ='/choisir-votre-compte' >Continuer</ion-button>

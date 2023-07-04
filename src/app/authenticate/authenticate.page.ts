@@ -21,15 +21,14 @@ export class AuthenticatePage implements OnInit {
   loggedEmail !: string   |any;
   loggedClient !: ClientProService |any;
   ngOnInit() {
-    this.loggedEmail = window.localStorage.getItem("email") ;
+    window.localStorage.clear();
 
-    this.loggedClient =  this.clientService.getClientByEmail(this.loggedEmail);
 
 
 
     this.userFormGroup =this.fb.group({
       email : this.fb.control('' , [Validators.email,Validators.required ]),
-      password : this.fb.control('' , [Validators.required , Validators.minLength(8)])
+      password : this.fb.control('' , [Validators.required ])
     })
   }
 
@@ -38,6 +37,7 @@ export class AuthenticatePage implements OnInit {
     let res =this.authService.login(this.email,this.password)
     if(res){
       this.router.navigateByUrl("menu/consulterComptes")
+      window.localStorage.setItem("email",this.email) ;
     }else {
       this.router.navigateByUrl("authenticate")
     }

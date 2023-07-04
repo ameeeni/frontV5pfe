@@ -1,8 +1,8 @@
 export class Virement{
-  IBANDebiteur : any;
-  IBANRecepteur: any;
-  type_de_virement : any;
-  date_de_virement :any;
+  ibandebiteur : any;
+  ibanbeneficiere: any;
+  type : any;
+  date_de_transaction!:any;
   montant:any;
   constructor() {
   }

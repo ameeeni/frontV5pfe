@@ -13,6 +13,6 @@ export class CptClientProService {
 
   SaveDemandeClientPro(clientPro: ClientPro): Observable<any> {
     console.log(clientPro) ;
-    return this._http.post("http://vps95761.serveur-vps.net:8080/ClientProfessionnel", clientPro);
+    return this._http.post("http://vps95761.serveur-vps.net:8080/Clients", clientPro);
   }
 }

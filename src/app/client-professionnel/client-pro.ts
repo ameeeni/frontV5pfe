@@ -1,13 +1,15 @@
+import {Compte} from "../choisir-votre-compte/Compte";
+
 export class ClientPro {
   nom !:  string;
   prenom !:  string;
   email !:  string;
   mot_de_passe !:  string;
   phone!:string;
-  matricule_fiscale !:string;
-  raison_social!: string;
-  num_reg_comm !: string;
-  listeDesComptes !: any[];
+ adresse!:string;
+
+
+  listeDesComptes !: Compte[];
   id_account!: number;
   id_client !:number;
   constructor() {

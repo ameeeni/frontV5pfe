@@ -24,4 +24,10 @@ export class ClientProService {
 
   }
 
+   getAccountByIBAN(iban: any):Observable<any>{
+
+     return this._http.get("http://vps95761.serveur-vps.net:8080/Compte/iban/" ,iban );
+
+   }
+
 }
